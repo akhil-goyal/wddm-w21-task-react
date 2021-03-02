@@ -1,0 +1,17 @@
+/* All styles here */
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html, body {
+	height: 100%;
+}
+html {
+	box-sizing: border-box;
+}
+body {
+	font: georgia, sans-serif;
+	background-color: #eee;
+	color: #111;
+	padding: 1em;
+	margin: 0;
+}

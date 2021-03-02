@@ -1,0 +1,17 @@
+.task {
+  display: block;
+  background-color: #fff;
+  padding: 0.5em;
+  border: 1px solid #666;
+}
+[type="checkbox"] {
+/* 	display: none; */
+}
+[type="checkbox"]:checked + .task {
+  text-decoration: line-through;
+  background-color: #eee;
+  color: #666;
+}
+[type="checkbox"]:not(:checked) + .task {
+  counter-increment: todo-items;
+}
