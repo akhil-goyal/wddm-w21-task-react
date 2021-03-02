@@ -3,6 +3,8 @@ import 'css/TaskItem.css'
 
 const TaskItem = ({ id, task, complete, onUpdateTask }) => {
 
+  console.log(`TaskItem: constructor`)
+
   const handleChange = (event) => {
     console.log(`check`, event.currentTarget.checked)
     complete = !complete
@@ -13,7 +15,7 @@ const TaskItem = ({ id, task, complete, onUpdateTask }) => {
   }
 
   return (<li>
-    <input type="checkbox" id={`task-${id}`} name={`task-${id}`} checked={(complete) ? `true` : ``} onChange={handleChange} />
+    <input type="checkbox" id={`task-${id}`} name={`task-${id}`} checked={complete} onChange={handleChange} />
     <label for={`task-${id}`} className="task">{task}</label>
   </li>)
 }
